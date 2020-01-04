@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "base2.html" %}
+{% load static %}
+        {% block stylesheet %}
+            <link rel="stylesheet" href="{% static "CSS/regi_css/Appointmnet.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+    <form enctype="multipart/form-data" method="POST" >
+        {{ appoint.as_p }}
+
+        {% csrf_token %}
+        <center><button type="submit" class="btn btn-primary"  >Submit</button></center>
+    </form>
+</div>
+{% endblock%}

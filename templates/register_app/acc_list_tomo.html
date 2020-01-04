@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "CSS/regi_css/acc_list_tomo.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+
+ {% for users in lists1 %}
+     <a href="/regi/acc_app/{{ users.id }}/">
+     <div class="jumbotron">
+         <img src="{{ users.Patient_Name.profile_photo.url }}" class="img-size " align="left"><br>
+
+         &nbsp&nbsp&nbsp<strong>Name : </strong>{{ users.Patient_Name }}<br>
+         &nbsp&nbsp&nbsp<strong>Time : </strong>{{ users.Appointment_Time }}<br>
+         &nbsp&nbsp&nbsp<strong>Date : </strong>{{ users.Appointment_Date }}
+
+     </div></a>
+{% endfor %}
+</div>
+{% endblock%}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+        {% block style_block %}
+
+            input[type=text],[type="password"] {
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+
+            form input[name='email']{
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+            form input[name='age']{
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+
+            .container1 {
+                box-sizing: content-box;
+                width:50%;
+                height:3%;
+                padding: 2%;
+                border: 1px solid black;
+                margin: auto;
+                border-radius: 5%;
+            }
+
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+
+ {% for user in all_patient %}
+     <div class="jumbotron">
+
+     <a href="/regi//{{ user.id }}/">{{ user.Patient_Name.user.first_name }}</a>
+
+     </div>
+{% endfor %}
+</div>
+{% endblock%}

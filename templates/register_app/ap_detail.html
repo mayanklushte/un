@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "CSS/regi_css/ap_detail.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+<div  class="card">
+    <img src="{{ listsq.Patient_Name.profile_photo.url }}" height="300px" width="30%">
+    <div class="container">
+    &nbsp<strong>Patient Name:</strong>{{ listsq.Patient_Name }} {{ listsq.Patient_Name.user.last_name }}<br><br>
+    &nbsp<strong>Docter Name:</strong>{{ listsq.Doctor_Name }}<br><br>
+    &nbsp<strong>Appointment Date:</strong>{{ listsq.Appointment_Date }}<br><br>
+    &nbsp<strong>Appointment Time:</strong>{{ listsq.Appointment_Time }}<br><br>
+    &nbsp<strong>Mobile Number:</strong>{{ listsq.Mobile_Number }}<br><br>
+    <center>
+
+    <a href="/regi/acc/{{ listsq.pk }}/" >
+        <button type="submit" class="btn btn-success" >Accept </button>
+    </a>
+        &nbsp&nbsp&nbsp
+    <a href="/regi/rej/{{ listsq.pk }}/" >
+        <button type="submit" class="btn btn-success" >Reject </button>
+    </a>
+    </center>
+
+    </div>
+
+</div>
+</div>
+{% endblock%}

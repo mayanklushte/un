@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+{% extends "base2.html" %}
+        {% block style_block %}
+
+            input[type=text],[type="password"] {
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+
+            form input[name='email']{
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+            form input[name='age']{
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+
+            .container1 {
+                box-sizing: content-box;
+                width:50%;
+                height:3%;
+                padding: 2%;
+                border: 1px solid black;
+                margin: auto;
+                border-radius: 5%;
+            }
+
+            .jumbotron{
+
+                background-repeat: no-repeat;
+                background-image: url('https://cenomed.cabanova.com/files/l65j-1t35ogvmnnx3-gpi7.jpg');
+                background-size: cover;
+                position: relative;
+                border-radius: 5%;
+            }
+            .img-size {
+            height: 170px;
+            width: 170px;
+            margin-left: 10px;
+            margin-right: 10px;
+
+            }
+
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+<div  style="background:transparent !important" class="jumbotron">
+    {% for i in check1 %}
+        <div class="jumbotron">
+
+
+         <img src="{{ i.Doctor_Name.profile_photo.url }}" class="img-size img-fluid"  align="right">
+
+    &nbsp<strong>Doctor Name:</strong>&nbsp&nbsp&nbsp{{ i.Doctor_Name.user.first_name }}&nbsp{{ i.Doctor_Name.user.last_name }}<br><br><br>
+        &nbsp<strong>Doctor Mobile No:&nbsp&nbsp</strong>{{ i.Doctor_Name.moblie_no }}<br><br><br>
+        &nbsp<strong>Doctor Address:&nbsp&nbsp</strong>{{ i.Doctor_Name.address }}
+        <br><br>&nbsp<strong>Appointment Date:&nbsp&nbsp</strong> {{ i.Appointment_Date }}
+        <br><br>&nbsp<strong>Appointment Time:&nbsp&nbsp</strong> {{ i.Appointment_Time }}
+        <br><br>&nbsp<strong>Request status:</strong>&nbsp&nbsp<strong style="color: orangered; size: 22px">Accepted</strong>
+
+    {% endfor %}
+        </div>
+        {% for j in check2 %}
+        <div class="jumbotron">
+
+         <img src="{{ j.Doctor_Name.profile_photo.url }}" class="img-size img-fluid"  align="right">
+
+    <strong>Doctor Name:</strong>&nbsp&nbsp&nbsp{{ j.Doctor_Name.user.first_name }}&nbsp{{ j.Doctor_Name.user.last_name }}<br><br><br><strong>Doctor Mobile No:&nbsp&nbsp</strong>{{ j.Doctor_Name.moblie_no }}<br><br><br><strong>Doctor Address:&nbsp&nbsp</strong>{{ j.Doctor_Name.address }}
+            <br><br><strong>Appointment Date:&nbsp&nbsp</strong> {{ j.Appointment_Date }}
+            <br><br><strong>Appointment Time:&nbsp&nbsp</strong> {{ j.Appointment_Time }}
+            <br><br><strong>Request status:</strong>&nbsp&nbsp<strong style="color: orangered; size: 22px">Rejected</strong>
+
+    {% endfor %}
+        <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+{% endblock%}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "CSS/regi_css/p_list.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+
+ {% for users in lists %}
+     <a href="/regi/appoin/{{ users.id }}/">
+     <div class="card">
+      <img src="{{ users.Patient_Name.profile_photo.url }}" height="200px" width="30%" >
+         <div class="container">
+
+             <table style="text-align: left; font-family: 'Times New Roman'; font-size: large">
+                    <tr>
+                        <th> Name:</th>
+                        <td>&nbsp&nbsp&nbsp&nbsp&nbsp{{ users.Patient_Name.user.first_name }}</td>
+                    </tr>
+                    <tr>
+                        <th >Time :</th>
+                        <td>&nbsp&nbsp&nbsp&nbsp{{ users.Appointment_Time }}</td>
+                    </tr>
+                    <tr>
+                        <th> Date :</th>
+                        <td>&nbsp&nbsp&nbsp&nbsp{{ users.Appointment_Date }}</td>
+                    </tr>
+             </table>
+         </div>
+     </div></a>
+{% endfor %}
+</div>
+{% endblock%}

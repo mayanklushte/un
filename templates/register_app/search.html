@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "base2.html" %}
+{% load static %}
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "CSS/regi_css/search.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+
+    <form class="form-inline my-2 my-lg-0">
+      <input
+       type="search"
+        placeholder="Search for Doctor by Name, Speciality, Locality"
+        aria-label="Search"
+       name="search"
+       value="{{ search_term }}"
+      >
+        <button class="btn btn-warning" type="submit">Search</button>
+    </form><br>
+
+ {% for user in result %}
+
+     <a href="/regi/search/{{ user.id }}/">
+         <div class="card">
+             <img src="{{ user.profile_photo.url }}"  width="100%">
+             <div class="container">
+                 <br>
+                <b>Name:</b>&nbsp{{ user.user.first_name.capitalize}}&nbsp{{ user.user.last_name.capitalize}}<br>
+
+                <b>Address:</b><p>{{ user.address}}</p><br>
+                <b>Specialist:</b>&nbsp{{ user.specialist.capitalize }}<br>
+
+             </div>
+
+         </div>
+     </a>
+
+{% endfor %}
+
+{% endblock%}

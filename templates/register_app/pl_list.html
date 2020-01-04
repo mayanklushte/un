@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends "base2.html" %}
+{% load static %}
+        {% block style_block %}
+
+            <link rel="stylesheet" href="{% static "CSS/regi_css/pl_list.css" %}">
+
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+    {% for users in lists1 %}
+        <h1>Today's Appointment</h1>
+        <div class="jumbotron">
+            <img src="{{ users.Patient_Name.profile_photo.url }}" class="img-size img-fluid" align="left">
+
+            &nbsp&nbsp&nbsp<strong>Name : </strong>{{ users.Patient_Name }}<br>
+            &nbsp&nbsp&nbsp<strong>Appointment Time : </strong>{{ users.Appointment_Time }}<br>
+            &nbsp&nbsp&nbsp<strong>Appointment Date : </strong>{{ users.Appointment_Date }}
+         </div>
+    {% endfor %}
+    {% for users1 in lists2 %}
+        <h1>Tomorrow's Appointment</h1>
+        <div class="jumbotron">
+            <img src="{{ users1.Patient_Name.profile_photo.url }}" class="img-size img-fluid" align="left">
+
+            &nbsp&nbsp&nbsp<strong>Name : </strong>{{ users1.Patient_Name }}<br>
+            &nbsp&nbsp&nbsp<strong>Appointment Time : </strong>{{ users1.Appointment_Time }}<br>
+            &nbsp&nbsp&nbsp<strong>Appointment Date : </strong>{{ users1.Appointment_Date }}
+        </div>
+    {% endfor %}
+</div>
+{% endblock%}

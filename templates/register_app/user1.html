@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+        {% block style_block %}
+
+            input[type=text],[type="password"] {
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+
+            form input[name='email']{
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+            form input[name='age']{
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+            .jumbotron{
+                margin-top: 15px;
+                padding: 17px;
+                border-radius: 5%;
+                background-image: url('https://cenomed.cabanova.com/files/l65j-1t35ogvmnnx3-gpi7.jpg');
+            }
+
+            .container1 {
+                box-sizing: content-box;
+                width:50%;
+                height:3%;
+                padding: 2%;
+                border: 1px solid black;
+                margin: auto;
+                border-radius: 5%;
+            }
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+
+
+{% for docter in all_docter %}
+     <div class="jumbotron">
+     <img src="{{ docter.doc_register.profile_photo.url }}" width="240">
+     <a href="/regi/docters/{{ docter.id }}/">{{ docter.user }}</a>
+     </div>
+
+
+{% endfor %}
+
+
+</div>
+{% endblock%}

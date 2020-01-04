@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% extends "base3.html" %}
+        {% block style_block %}
+
+            input[type=text],[type="password"] {
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+        form input[name="x"]{
+            width: 70%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+
+            form input[name='y']{
+            width: 70%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+
+            form input[name="z"]{
+            width: 70%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+
+            }
+
+
+            .container1 {
+                box-sizing: content-box;
+                width:60%;
+                padding: 2%;
+                border: 1px;
+                margin: auto;
+                background-color: #FFFFFF;
+                margin-top: 150px;
+                border-radius: 10px;
+                box-shadow: 0 8px 16px 0 #2b669a;
+            }
+
+
+
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+    <form enctype="multipart/form-data" method="POST" >
+      <center> <strong>Total Body Water Male</strong> </center>
+        <br><br>
+        <strong>Weight:&nbsp&nbsp&nbsp&nbsp{{ form.x }} in kg</strong><br><br>
+        <strong>Height:&nbsp&nbsp&nbsp&nbsp&nbsp{{ form.y }} in cm</strong><br><br>
+        <strong>Age:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{ form.z }} in years</strong><br><br>
+    {% csrf_token %}
+        <center><button type="submit" class="btn btn-primary"  >Submit</button></center>
+    </form>
+</div>
+{% endblock%}

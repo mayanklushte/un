@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "CSS/regi_css/pat_info.css" %}">
+        {% endblock%}
+
+
+{% block body_block %}
+<div class="container1">
+<div  style="background:transparent !important" class="jumbotron">
+    <img src="{{ user.Patient_Name.profile_photo.url }}" class="img-size" align="right"><br><strong>Patient Name:</strong>{{ user1.user.first_name }}&nbsp{{ user1.user.last_name }}<br><br><strong>Mobile No:</strong>{{ user.Mobile_Number }}<br><br><strong>Address:</strong>{{ user1.address }}
+
+    <br><br><center><a href="/regi/pat_dat/{{ user1.id }}/"> <button class="btn btn-primary" >New Entry</button></a></center>
+    <br><br>
+    {% for i in user2 %}
+        <center><h3>Past Appointment{{ i.indexes }}</h3></center>
+        {% for jh in user4 %}
+            <center><Strong>{{ i.appoin_time }}</Strong></center>
+         {% endfor %}
+
+        <strong>Symptoms:</strong>{{ i.symptoms}}<br><br>
+        <strong>Diagnosis:</strong>{{ i.diagnosis}}<br><br>
+        <strong>Medications:</strong>{{ i.medication_list}}<br><br>
+        <strong>Medical history:</strong>{{ i.medical_history}}<br><br>
+        <strong>Examination:</strong>{{ i.examination}}<br><br>
+        <strong>Fee:</strong>{{ i.fee}}<br><br>
+        <center><a href="/regi/pdf/{{ i.id }}/"> <button class="btn btn-primary" >Generate Report</button></a></center><br><br>
+    {% endfor %}
+</div>
+</div>
+{% endblock%}

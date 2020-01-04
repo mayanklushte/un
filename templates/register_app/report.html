@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "base2.html" %}
+{% load staticfiles %}
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "CSS/regi_css/report.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+
+<div class="container1">
+    <center><h1>Patient Report Submission</h1></center>
+    <form enctype="multipart/form-data" method="POST" >
+        X-ray:&nbsp<br><div class="btn btn-primary btn-file">Choose File{{ report.X_ray }}</div><br>
+        MRI:&nbsp<br><div class="btn btn-primary btn-file">Choose File{{ report.MRI }}</div><br>
+        Blood test:&nbsp<br><div class="btn btn-primary btn-file">Choose File{{ report.Blood_test }}</div><br>
+        CT_Scan:&nbsp<br><div class="btn btn-primary btn-file">Choose File{{ report.CT_Scan }}</div><br>
+        ECG:&nbsp<br><div class="btn btn-primary btn-file">Choose File{{ report.ECG }}</div><br><br><br>
+
+        {% csrf_token %}
+        <center><button type="submit" class="btn btn-light"  >Submit</button></center>
+    </form>
+
+</div>
+{% endblock%}

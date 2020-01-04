@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "base2.html" %}
+{% load static %}
+        {% block stylesheet %}
+            <link rel="stylesheet" href="{% static "CSS/regi_css/d_details.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+<div class="card">
+
+    <img src="{{ d_user.profile_photo.url }}"  width="50%">
+
+    <div class="container" style="width: 350%">
+        <br><br>Docter Name :&nbsp&nbsp&nbsp{{ d_user.user.first_name}} {{ d_user.user.last_name}}<br><br>
+        Docter Contact No :&nbsp&nbsp&nbsp022 - {{ d_user.clinic_phone_no }}<br><br>
+        Docter Address :&nbsp&nbsp&nbsp{{ d_user.address }}<br><br>
+        Specialist :&nbsp&nbsp&nbsp{{ d_user.specialist }}<br><br>
+        Open time :&nbsp&nbsp&nbsp{{ d_user.open_time }}<br><br>
+        Close time :&nbsp&nbsp&nbsp{{ d_user.close_time }}<br><br>
+        Close day :&nbsp&nbsp&nbsp{{ d_user.close_day}}<br><br>
+
+        <div id="link">
+            <center><a href="/regi/Appointments/{{ d_user.id }}/"><button class="btn btn-success"  type="submit"><strong>Appointment</strong></button></a></center>
+        </div><br>
+    </div>
+</div>
+</div>
+{% endblock%}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "base3.html" %}
+{%  load static %}
+        {% block stylesheet %}
+            <link rel="stylesheet" href="{% static "CSS/regi_css/output.css" %}">
+        {% endblock%}
+{% block body_block %}
+    <br><br><br><br><br><br>
+<div class="container1">
+
+    <strong><h1>Your Resting Metabolic Rate</h1></strong>
+  <h1> Output = {{output}} </h1>
+ <h1>Thanks For Visiting</h1>
+</div>
+{% endblock%}

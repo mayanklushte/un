@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "base2.html" %}
+{% load static %}
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "CSS/regi_css/p_acc_list.css" %}">
+
+        {% endblock%}
+
+{% block body_block %}
+
+
+ {% for users in lists1 %}
+     <a href="/regi/p_acc_list/{{ users.id }}/">
+        <div class="card">
+
+            <img src="{{ users.Doctor_Name.profile_photo.url }}"  width="100%">
+            <div class="container">
+                <br>
+                Doctor Name :&nbsp&nbsp&nbsp{{ users.Doctor_Name.user.first_name.capitalize}} {{ users.Doctor_Name.user.last_name.capitalize}}<br><br>
+                Specialist :&nbsp&nbsp&nbsp{{ users.Doctor_Name.specialist.capitalize }}<br><br>
+                Doctor Address :<p>{{ users.Doctor_Name.address }}</p><br><br>
+                Appointment Time :&nbsp&nbsp&nbsp{{ users.Appointment_Time }}<br><br>
+                Appointment Date :&nbsp&nbsp&nbsp{{ users.Appointment_Date }}<br><br>
+            </div>
+        </div>
+     </a>
+{% endfor %}
+
+{% endblock%}

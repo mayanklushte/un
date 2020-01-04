@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends "base2.html" %}
+{% load static %}
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "CSS/regi_css/pat_pat_info.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+<div  style="background:transparent !important" class="jumbotron">
+    <img src="{{ user.Doctor_Name.profile_photo.url }}" class="img-size" align="right">
+
+    <strong>Patient Name:</strong>{{ user3.user.first_name }}&nbsp{{ user3.user.last_name }}<br><br><br><strong>Patient Mobile No:</strong>{{ user3.moblie_no }}<br><br><br><strong>Patient Address:</strong>{{ user3.address }}
+
+    <br><br>
+
+        <center><h2>Past Appointment</h2></center>
+
+    {% for i in user2 %}
+
+            <center><Strong>{{ i.appoin_time }}</Strong></center>
+
+
+        <strong>Symptoms:</strong>{{ i.symptoms}}<br><br>
+        <strong>Diagnosis:</strong>{{ i.diagnosis}}<br><br>
+        <strong>Medications:</strong>{{ i.medication_list}}<br><br>
+        <strong>Medical history:</strong>{{ i.medical_history}}<br><br>
+        <strong>Examination:</strong>{{ i.examination}}<br><br>
+        <strong>Fee:</strong>{{ i.fee}}<br><br>
+
+
+
+
+        <center>
+            <a href="/regi/pdf/{{ i.id }}/"> <button class="btn btn-primary" >Generate Report PDF</button></a>
+            <a href="/regi/vrp/{{ i.id }}/"> <button class="btn btn-primary" >View Report</button></a>
+
+            <a href="/regi/rp/{{ i.id }}/"> <button class="btn btn-primary" >Add Report</button></a>
+
+        </center><br><br>
+
+    {% endfor %}
+
+
+
+
+</div>
+</div>
+{% endblock%}

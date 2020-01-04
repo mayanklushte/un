@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "CSS/regi_css/pat_detail.css" %}">
+        {% endblock%}
+
+
+{% block body_block %}
+   <center><h1>Patient entry form</h1></center>
+<div class="container1">
+
+    <form enctype="multipart/form-data" method="POST" >
+        {{ pat_dat.as_p }}
+
+    {% csrf_token %}
+        <center><button type="submit" class="btn btn-primary"  >Submit</button></center>
+    </form>
+
+</div>
+{% endblock%}

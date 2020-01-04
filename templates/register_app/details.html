@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+        {% block stylesheet %}
+
+            <link rel="stylesheet" href="{% static "CSS/regi_css/details.css" %}">
+
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+<div  style="background:transparent !important" class="jumbotron">
+    <strong>Patient Image:</strong><img src="{{ user.profile_photo.url }}" width ="250" align="right"><br><br><br><strong>Patient Id:</strong>{{ user.id }}<br><br><br><strong>Patient Name:</strong>{{ user }}<br><br><br><strong>Patient Mobile No:</strong>{{ user.moblie_no }}<br><br><br><strong>Patient Address:</strong>{{ user.address }}
+</div>
+</div>
+{% endblock%}

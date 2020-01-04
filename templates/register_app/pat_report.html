@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "base2.html" %}
+{% load staticfiles %}
+
+        {% block stylesheet %}
+
+            <link rel="stylesheet" href= "{% static "CSS/regi_css/pat_report.css" %}">
+
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+<div class="jumbotron">
+
+    {% for jc in user2 %}
+        <br><div class="names">
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<strong>X-Ray:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<strong>MRI:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<strong>CT SCAN:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<strong>Blood Report:</strong><br><br></div>
+        <a href="{{ jc.X_ray.url }}/"><img src="{{ jc.X_ray.url }}" class="img-size img-fluid"></a>
+
+        <a href="{{ jc.MRI.url }}/" ><img src="{{ jc.MRI.url }}" class="img-size img-fluid" ></a>
+        <a href="{{ jc.CT_Scan.url }}/"><img src="{{ jc.CT_Scan.url }}" class="img-size img-fluid" ></a>
+        <a href="{{ jc.Blood_test.url }}/"><img src="{% static "login_app/images/sample.png" %}" class="img-size img-fluid" ></a><br><br>
+    {% endfor %}
+
+
+</div>
+</div>
+{% endblock%}

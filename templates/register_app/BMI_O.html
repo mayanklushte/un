@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "base3.html" %}
+{% load static %}
+        {% block stylesheet %}
+            <link rel="stylesheet" href="{% static "CSS/regi_css/BMI_O.css" %}">
+        {% endblock%}
+{% block body_block %}
+<br><br><br><br><br>
+<div class="container1">
+
+    <strong><h1>Your Body Mass Index</h1></strong>
+    <strong> BODY MASS INDEX = {{ output }}</strong>
+    <h1>Thanks For Visiting</h1>
+</div>
+{% endblock%}

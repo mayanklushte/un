@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% extends "base3.html" %}
+{% load static %}
+        {% block stylesheet %}
+
+            <link rel="stylesheet" href="{% static "CSS/regi_css/doc_register.css" %}">
+
+
+        {% endblock%}
+
+{% block body_block %}
+
+<div class="container1">
+    {% if registered %}
+    <h1>Thank you For Registering!</h1>
+
+    {% else %}
+
+        <center><h1>Doctor Registration Form</h1></center>
+    <form enctype="multipart/form-data" method="POST" >
+        {{ form_d.as_p }}
+        <label>Mobile No:</label><br>
+        {{ d_form.moblie_no }}
+        <label>Address:</label><br>
+        {{ d_form.address }}
+        <label>State:</label><br>
+        {{ d_form.state }}
+        <label>Pin Code:</label><br>
+        {{ d_form.pincode }}
+        <label>Age:</label><br>
+        {{ d_form.age}}
+        <label>Clinic Phone No:</label><br>
+        {{ d_form.clinic_phone_no }}
+        <label>Specialist:</label><br>
+        {{ d_form.specialist }}
+        <label>Open Time:</label><br>
+        {{ d_form.open_time }}
+        <label>Close Time:</label><br>
+        {{ d_form.close_time }}
+        <label>Close Day:</label><br>
+        {{ d_form.close_day }}
+        <label>Profile Photo:</label><br>
+        <div class="btn btn-primary btn-file">
+            Choose Image
+            {{ d_form.profile_photo }}
+        </div>
+
+    {% csrf_token %}
+        <center><button type="submit" class="btn btn-light"  >Submit</button></center>
+    </form>
+    {% endif %}
+</div>
+{% endblock%}

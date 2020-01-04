@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "base3.html" %}
+        {% block style_block %}
+
+            input[type=text],[type="password"] {
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+
+
+
+            .container1 {
+                box-sizing: content-box;
+                width:50%;
+                height:3%;
+                padding: 2%;
+                border: 1px solid black;
+                margin: auto;
+                border-radius: 5%;
+            }
+
+
+
+        {% endblock%}
+{% block body_block %}
+    <br><br><br><br><br><br>
+<div class="container1">
+
+    <strong><h1>Your Total Body Water </h1></strong>
+  <h1> Total Body Water = {{output}} L </h1>
+    <h1>Thanks For Visiting</h1>
+</div>
+{% endblock%}
