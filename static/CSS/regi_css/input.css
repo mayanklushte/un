@@ -1,0 +1,100 @@
+input[type=text],[type="password"] {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+form input[name="x"]{
+    width: 70%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form input[name='y']{
+    width: 70%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form input[name="z"]{
+    width: 70%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+.container1 {
+    box-sizing: content-box;
+    width:60%;
+    padding: 2%;
+    border: 1px;
+    margin: auto;
+    background-color: #FFFFFF;
+    margin-top: 150px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 #2b669a;
+}
+
+@media only screen and (max-width: 1119px) {
+
+    div.container1 {
+        box-sizing: content-box;
+        width:80%;
+        height:1%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 3%;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    div.container1 {
+        box-sizing: content-box;
+        width:80%;
+        height:1%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 5%;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    div.container1 {
+        box-sizing: content-box;
+        width:90%;
+        height:1%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 2%;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+
+    div.container1 {
+        box-sizing: content-box;
+        width:90%;
+        height:1%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 5%;
+    }
+
+
+}

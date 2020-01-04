@@ -1,0 +1,84 @@
+input[type=text],[type="password"] {
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="Appointment_Time"]{
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+.special{
+    width: 21%;
+    border-radius: 100px;
+    padding: 7px;
+    margin-left: 10px;
+}
+
+
+.container1 {
+    box-sizing: content-box;
+    width:60%;
+    height:3%;
+    padding: 2%;
+    border: 1px;
+    margin: auto;
+    border-radius: 5%;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 16px 0 #2b669a;
+    margin-bottom: 20px;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .container1 {
+        box-sizing: content-box;
+        width:70%;
+        height:3%;
+        padding: 2%;
+        border: 1px;
+        margin: auto;
+        border-radius: 5%;
+        background-color: #FFFFFF;
+        box-shadow: 0 8px 16px 0 #2b669a;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 411px) {
+    .container1 {
+        box-sizing: content-box;
+        width:60%;
+        height:3%;
+        padding: 2%;
+        border: 1px;
+        margin: auto;
+        border-radius: 5%;
+        background-color: #FFFFFF;
+        box-shadow: 0 8px 16px 0 #2b669a;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .container1 {
+        box-sizing: content-box;
+        width:70%;
+        height:3%;
+        padding: 2%;
+        border: 1px;
+        margin: auto;
+        border-radius: 5%;
+        background-color: #FFFFFF;
+        box-shadow: 0 8px 16px 0 #2b669a;
+        margin-bottom: 20px;
+    }
+}

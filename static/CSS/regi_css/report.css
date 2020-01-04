@@ -1,0 +1,123 @@
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+ input[type=file] {
+     position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+ .btn-primary{
+     background-color: white;
+     width: 50%;
+     margin-top: 10px;
+     margin-bottom: 15px;
+     padding: 7px;
+     border: 1px solid black;
+     border-radius: 100px;
+     color: black;
+
+ }
+
+ .btn-light{
+     background-color: #2b669a;
+     color: black;
+ }
+.container1 {
+    box-sizing: content-box;
+    width:60%;
+    height:3%;
+    padding: 2%;
+    border: 1px;
+    margin: auto;
+    border-radius: 5%;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 16px 0 #2b669a;
+
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:600px) {
+
+    .container1 {
+        box-sizing: content-box;
+        width: 90%;
+        height:3%;
+        border: 1px;
+        margin: auto;
+        border-radius: 5%;
+        background-color: #FFFFFF;
+        box-shadow: 0 8px 16px 0 #2b669a;
+        margin-bottom: 20px;
+
+    }
+
+    .btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+ input[type=file] {
+     position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 50%;
+    min-height: 50%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+ .btn-primary{
+     background-color: white;
+     width: 80%;
+     margin-top: 10px;
+     margin-bottom: 15px;
+     padding: 7px;
+     border: 1px solid black;
+     border-radius: 100px;
+     color: black;
+
+ }
+
+ .btn-light{
+     background-color: #407DCB;
+     color: black;
+ }
+
+}
+
+@media only screen and (max-width: 320px) {
+
+    .container1 {
+        box-sizing: content-box;
+        width: 80%;
+        height:3%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 5%;
+    }
+}

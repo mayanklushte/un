@@ -1,0 +1,87 @@
+input[type=text],[type="password"] {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+            }
+form input[name="x"]{
+    width: 70%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form input[name='y']{
+    width: 70%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form input[name="z"]{
+    width: 70%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+
+.container1 {
+    box-sizing: content-box;
+    width:60%;
+    padding: 2%;
+    border: 1px;
+    margin: auto;
+    background-color: #FFFFFF;
+    margin-top: 150px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 #2b669a;
+}
+
+
+#link {
+    width: 10em;
+    border: 2px solid black;
+    background: #407DCB;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container1 {
+        box-sizing: content-box;
+        width:80%;
+        height:3%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 5%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .container1 {
+        box-sizing: content-box;
+        width:80%;
+        height:7%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 5%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container1 {
+        box-sizing: content-box;
+        width:80%;
+        height:3%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 5%;
+    }
+}

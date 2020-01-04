@@ -1,0 +1,51 @@
+input[type=text],[type="password"] {
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+
+            form input[name='email']{
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+            form input[name='age']{
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 100px;
+            }
+            .jumbotron{
+                height: 100px;
+                background-repeat: no-repeat;
+                background-image: url('https://cenomed.cabanova.com/files/l65j-1t35ogvmnnx3-gpi7.jpg');
+                background-size: cover;
+                position: relative;
+            }
+
+            .img-size {
+            height: 120px;
+            width: 120px;
+            margin-left: 10px;
+            margin-right: 10px;
+
+            }
+
+            .container1 {
+                box-sizing: content-box;
+                width:50%;
+                height:3%;
+                padding: 2%;
+                border: 1px solid black;
+                margin: auto;
+                border-radius: 5%;
+            }
+            a:hover{
+                text-decoration: none;
+                color:black;
+            }

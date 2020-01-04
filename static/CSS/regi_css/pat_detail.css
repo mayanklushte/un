@@ -1,0 +1,72 @@
+
+input[type=text],[type="password"] {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+.container1 {
+    box-sizing: content-box;
+    width:50%;
+    height:3%;
+    padding: 2%;
+    border: 1px solid black;
+    margin: auto;
+    border-radius: 5%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    div.jumbotron {
+
+    }
+
+    div.container1 {
+        box-sizing: content-box;
+        width:70%;
+        height:1%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 5%;
+    }
+    .img-size {
+        height: 120px;
+        width: 120px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    div.jumbotron {
+        font-size: 12px;
+    }
+
+    div.container1 {
+        box-sizing: content-box;
+
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 5%;
+    }
+
+    .img-size {
+        height: 90px;
+        width: 90px;
+
+    }
+
+    input[type=text],[type="password"] {
+        width: 90%;
+        margin-bottom: 5px;
+        padding: 7px;
+        border: 1px solid black;
+        border-radius: 100px;
+    }
+
+}

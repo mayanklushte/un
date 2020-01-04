@@ -1,0 +1,112 @@
+input[type=text],[type="password"] {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form input[name='email']{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form input[name='age']{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+.container1 {
+    box-sizing: content-box;
+    width:50%;
+    height:3%;
+    padding: 2%;
+    border: 1px solid black;
+    margin: auto;
+    border-radius: 5%;
+}
+
+.img-size {
+    height: 120px;
+    width: 120px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    div.jumbotron {
+
+    }
+
+    div.container1 {
+        box-sizing: content-box;
+        width:80%;
+        height:1%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 5%;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    div.jumbotron {
+        font-size: 10px;
+    }
+
+    div.container1 {
+        box-sizing: content-box;
+        width:80%;
+        height:1%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 5%;
+    }
+    .btn-primary{
+        width: 160px;
+        padding: 2%;
+        margin-top: 3%;
+    }
+
+    .img-size {
+        height: 100px;
+        width: 100px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    div.jumbotron {
+        font-size: 10px;
+        width: 250px;
+    }
+
+    div.container1 {
+        box-sizing: content-box;
+        width:80%;
+        height:1%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 5%;
+    }
+    .btn-primary{
+        width: 160px;
+        padding: 2%;
+        margin-top: 3%;
+    }
+
+    .img-size {
+        height: 85px;
+        width: 75px;
+        margin-right: 7px;
+    }
+}
