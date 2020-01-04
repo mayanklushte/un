@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <title>Beats</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        {% block stylesheet %}
+
+        {% endblock%}
+
+        <style>
+
+            .si{
+                margin-top: 80px;
+            }
+
+            body {
+                background-color: #E6E6FA;
+            }
+        </style>
+
+        {% block style_block %}
+
+        {% endblock%}
+    </head>
+    <body >
+    <nav class="navbar  navbar-inverse navbar-fixed-top">
+
+  <div class="container-fluid">
+      <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        <a class="navbar-brand" href="{% url 'register_app:acc_app' %}"><i class="fa fa-heartbeat">beats</i> </a>
+      </div>
+  <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav navbar-nav">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-list-alt"></span>&nbspTools <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="{% url 'register_app:BMI' %}">Body Mass Index</a></li>
+                <li><a href="{% url 'register_app:M_add' %}">RMR Male</a></li>
+                <li><a href="{% url 'register_app:add' %}">RMR Female</a></li>
+                <li><a href="{% url 'register_app:TBW' %}">TBW Male</a></li>
+                <li><a href="{% url 'register_app:TBW_F' %}">TBW Female</a></li>
+            </ul>
+        </li>
+
+        <li><a href="{% url 'register_app:acc_app' %}">Todays </a></li>
+            <li><a href="{% url 'register_app:acc_app_tomo' %}" >Tomorrows </a></li>
+            <li><a href="{% url 'register_app:u_appoint' %}" >Requests</a></li>
+
+        </ul>
+   <ul class="nav navbar-nav navbar-right">
+
+
+       {% if user.is_authenticated %}
+            <li><a href="{% url 'register_app:user_logout' %}"><span class="glyphicon glyphicon-log-in"></span>&nbspLogout</a></li>
+
+       {% else %}
+
+       {% endif %}
+
+    </ul>
+    </div>
+    </div>
+
+</nav>
+
+    <div class="si">
+
+    </div>
+
+
+        {% block body_block %}
+
+
+        {% endblock%}
+
+
+
+    </body>
+
+</html>
